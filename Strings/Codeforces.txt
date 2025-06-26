@@ -1,0 +1,72 @@
+4) Strings (≈ 35 problems)
+Focus on case changes, concatenation, substring find, reorder, palindrome checks.
+
+59A – Word
+
+281A – Word Capitalization
+
+112A – Petya and Strings
+
+232A – Correct Solution?
+
+1744A – Number Replacement
+
+731A – Night at the Museum
+
+535A – Tavas and Nafas
+
+908A – New Year and Counting Cards
+
+263A – Beautiful Matrix
+
+131A – cAPS lOCK
+
+996A – Hit the Lottery
+
+1270A – Card Game
+
+1475A – Odd Divisor
+
+1729A – Bestie
+
+1367A – Short Task
+
+1506B – Partial Replacement
+
+1511A – Review Site
+
+1550A – Find The Array
+
+1598A – Computer Game
+
+1618A – Polycarp and Coins
+
+1626A – Equidistant Letters
+
+1631B – Fun with Even Subarrays
+
+1649A – Game
+
+1672A – Crossword Solving
+
+1680A – Minimum Maximal Degree
+
+1703A – YES or YES?
+
+1714A – Everybody Loves to Sleep
+
+1729B – Friends and Candies
+
+1741A – Compare T-Shirt Sizes
+
+1760A – Medium Number
+
+1762A – Divide and Conquer?
+
+1772A – A+B?
+
+1791A – Codeforces Checking
+
+1829A – Love Story
+
+1850A – Deletions of Two Adjacent Letters

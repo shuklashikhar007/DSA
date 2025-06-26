@@ -1,0 +1,72 @@
+5) Other Basic C++ Fundamentals (≈ 35 problems)
+Including loops, conditionals, math, data types, I/O.
+
+1598A – Computer Game
+
+1633A – Div. 7
+
+1368A – C+=
+
+1520A – Do Not Be Distracted!
+
+1108A – Two Distinct Points
+
+122A – Lucky Division
+
+1352A – Sum of Round Numbers
+
+1472A – Cards for Friends
+
+1527A – And Then There Were K
+
+1585A – Phoenix and Gold
+
+1669A – Division?
+
+1726B – Combinatorics Homework
+
+1742A – Sum
+
+1798A – Showstopper
+
+1829B – Love Song
+
+1850B – Ten Powers of Two
+
+1862A – Three Pairwise Maximums
+
+1873A – Polygon for the Angle
+
+1881A – Triple Flip
+
+1891A – Cutting Pizza
+
+1901A – Make Even
+
+1914A – Container for Pictures
+
+1920A – Falling Anvils
+
+1932A – Reaction Game
+
+1943A – Two Prefixes
+
+1950A – Greed
+
+1961A – Fall Down
+
+1974A – Required Remainder
+
+1985A – Digits Sum
+
+1990A – Almost Prime
+
+1991A – Team Composition
+
+2000A – ABC String
+
+2001A – Beautiful Matrix (repeat variant)
+
+2002A – Pizza, Pizza, Pizza!!!
+
+2003A – Rebus Easy

@@ -21,7 +21,7 @@ int main() {
     // Substring
     cout << "Substring (0, 5): " << s3.substr(0, 5) << endl;
 
-    // Find
+    // Find ******
     size_t pos = s3.find("World");
     if (pos != string::npos)
         cout << "'World' found at index: " << pos << endl;
@@ -62,7 +62,7 @@ int main() {
 
     // Sorting
     string sortStr = "dcba";
-    sort(sortStr.begin(), sortStr.end()); // to sort a string in ascending order form index (from , to); be deafult in ascending order 
+    sort(sortStr.begin(), sortStr.end()); // to sort a string in ascending order form index (from , to); be default in ascending order 
     cout << "Sorted string: " << sortStr << endl;
 
     // Reverse

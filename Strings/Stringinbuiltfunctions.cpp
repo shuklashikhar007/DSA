@@ -13,10 +13,11 @@ bool evenFirst(int a, int b) {
 
 // Comparator for sorting pairs by second value
 bool sortBySecond(pair<int, int> a, pair<int, int> b) {
-    return a.second < b.second;
+    if(a.first + a.second == b.first + b.second) return true;
+    else return false;
 }
 
-int main() {
+int main(){
 
     // 1. Sorting Array (Ascending)
     int arr[] = {5, 3, 1, 4, 2};

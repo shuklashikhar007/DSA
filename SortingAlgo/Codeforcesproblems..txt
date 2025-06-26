@@ -1,0 +1,64 @@
+Here are ~30 Codeforces problems to practice sorting-based logic:
+
+🔹 Beginner
+339A – Helpful Maths
+
+266A – Stones on the Table
+
+158A – Next Round
+
+144A – Arrival of the General
+
+337A – Puzzles
+
+160A – Twins
+
+492B – Vanya and Lanterns
+
+1472A – Cards for Friends
+
+1669B – Triple
+
+977B – Two-gram
+
+🔸 Intermediate
+977E – Cyclic Components
+
+151A – Soft Drinking
+
+1374B – Multiply by 2, Divide by 6
+
+580A – Kefa and First Steps
+
+723A – The New Year: Meeting Friends
+
+459B – Pashmak and Flowers
+
+116A – Tram
+
+141A – Amusing Joke
+
+1141A – Game 23
+
+977C – Less or Equal
+
+🔺 Medium-Hard Sorting Logic
+580C – Kefa and Park
+
+489C – Given Length and Sum of Digits
+
+705A – Hulk
+
+1030A – In Search of an Easy Problem
+
+143A – Help Vasilisa the Wise 2
+
+131A – cAPS lOCK
+
+552A – Vanya and Table
+
+1283B – Candies Division
+
+1097A – Gennady and a Card Game
+
+1490A – Dense Array

@@ -1,0 +1,82 @@
+3) Arrays (≈ 40 problems)
+These involve scanning, summing, prefix sums, rearranging, indexing, grouping.
+
+266A – Stones on the Table
+
+144A – Arrival of the General
+
+160A – Twins
+
+337A – Puzzles
+
+345A – Fight the Monster
+
+448A – Rewards
+
+630A – Again Twenty Five!
+
+710A – King Moves
+
+520A – Pangram
+
+443A – Anton and Letters
+
+131A – cAPS lOCK
+
+228A – Horseshoe on the other hoof?
+
+486A – Calculating Function
+
+701B – Cells Not Under Attack
+
+978B – File Name
+
+131B – Opponents
+
+146A – Lucky Ticket
+
+381A – Sereja and Dima
+
+1110A – Parity Alternated Deletions
+
+169A – Chores
+
+904A – Vitya and Sandy
+
+1462D – Add to Neighbour and Remove
+
+1154B – Make Them Equal
+
+1100A – Roman and Browser
+
+1015A – Points in Segments
+
+1285B – Just Eat It!
+
+1438A – Specific Tastes of Andre
+
+1606A – AB Balance
+
+1428A – Box is Pull
+
+1399A – Remove Smallest
+
+1196A – Three Piles of Candies
+
+1409A – Yet Another Two Integers Problem
+
+1462C – Unique Number
+
+1526A – Mean Inequality
+
+1363A – Odd Selection
+
+1551A – Polycarp and Coins
+
+1165A – Remainder Problem
+
+1670A – Prof. Slim
+
+1702A – Round Down the Price
+
+1722A – Spell Check

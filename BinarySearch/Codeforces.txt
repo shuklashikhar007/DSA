@@ -1,0 +1,41 @@
+Problems->
+
+1114B – Yet Another Array Partition Task
+
+1272D – Remove One Element
+
+1370B – GCD Compression
+
+1400A – String Similarity
+
+1485A – Add and Divide
+
+1201A – Important Exam
+
+1257B – Make Them Odd
+
+1005A – Tanya and Stairways
+
+1020B – Badge Preparation
+
+1197A – DIY Wooden Ladder
+
+987A – Infinity Gauntlet
+
+1095B – Array Stabilization
+
+1213A – Chips Moving
+
+1092C – Prefixes and Suffixes
+
+1560C – Infinity Table
+
+1445B – Eliminate the Subsequence
+
+1373C – Pluses and Minuses
+
+1462B – Last Year's Substring
+
+1623B – Game on Ranges
+
+1676C – Most Similar Words

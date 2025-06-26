@@ -1,0 +1,42 @@
+🧱 2) Vectors (≈ 20 problems)
+Cover creation, manipulation, sorting, grouping, and I/O.
+
+977B – Two-gram
+
+1472B – Fair Division
+
+1360B – Honest Coach
+
+1234A – Even Odds
+
+701A – Cards for Friends
+
+439A – Devu and Great Escapade
+
+158B – Taxi
+
+1283A – Minutes Before New Year
+
+149A – Business Trip
+
+1144A – Diverse Strings
+
+1154A – Restoring Three Numbers
+
+1260B – Obtain Two Zeroes
+
+1313A – Fast Food Restaurant
+
+1426B – Symmetric Matrix
+
+1462A – Favorite Sequence
+
+1506A – Strange Table
+
+1512B – Almost Rectangle
+
+1473A – Replacing Elements
+
+1631A – Min Max Swap
+
+1726A – NEKO's Maze Game
