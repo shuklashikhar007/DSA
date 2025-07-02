@@ -91,6 +91,9 @@ int main() {
     cout << "Enter a full sentence: ";
     getline(cin, line); // getline(cin,line);
     cout << "You entered: " << line << endl;
+    // code to extract words from a string.
+
+    
 
     return 0;
 }
