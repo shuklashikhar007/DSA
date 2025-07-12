@@ -1,5 +1,6 @@
 #include <iostream>
 #include <algorithm>
+#include <vector>
 using namespace std;
 //Not done by now to be done later.
 // Function to print 2D array
@@ -36,6 +37,8 @@ int main() {
 
     cout << "\nMatrix after sorting each cols:\n";
     printArray(arr, rows);
+    
+  
 
     return 0;
 }

@@ -1,3 +1,10 @@
 The digital root of a number is the value obtained by repeatedly summing the digits until a single-digit number is obtained. There's a neat math trick: except for 0, the result is always 1 + (num - 1) % 9.
-
+2 The XOR operator gives output where ever the bits are differne so we can use a built in function to find hammering distance ( distance between points having different bits other than 0 or 1 using the 
+following built in function -> 
+class Solution {
+public:
+    int hammingDistance(int x, int y) {
+        return __builtin_popcount(x ^ y);
+    }
+};
 
