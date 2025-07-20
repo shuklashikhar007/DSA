@@ -1,56 +1,52 @@
-#include <iostream>
+#include<iostream>
+#include<vector>
 using namespace std;
-// best time complexity sorting algorithmn
-void merge(int arr[], int left, int mid, int right) {
-    // Sizes of two subarrays
-    int n1 = mid - left + 1;
-    int n2 = right - mid;
+void merge(vector<int> &v, int low , int mid, int high){
+    vector<int> temp;
+    int left = low;
+    int right = mid + 1;
+    
+    while(left <= mid && right <= high){
+        if(v[left] <= v[right]){
+            temp.push_back(v[left]);
+            left++;
+        }
+        else{
+            temp.push_back(v[right]);
+            right++;  
+        }
+    }
 
-    // Temporary arrays
-    int L[n1], R[n2];
+    while(left <= mid){
+        temp.push_back(v[left]);
+        left++;
+    }
 
-    // Copy data
-    for (int i = 0; i < n1; i++) L[i] = arr[left + i];
-    for (int j = 0; j < n2; j++) R[j] = arr[mid + 1 + j];
+    while(right <= high){
+        temp.push_back(v[right]);
+        right++;
+    }
 
-    // Merge back into arr
-    int i = 0, j = 0, k = left;
-    while (i < n1 && j < n2)
-        arr[k++] = (L[i] <= R[j]) ? L[i++] : R[j++];
-
-    // Copy remaining elements
-    while (i < n1) arr[k++] = L[i++];
-    while (j < n2) arr[k++] = R[j++];
+    for(int i = low; i <= high; i++){
+        v[i] = temp[i - low];
+    }
 }
 
-void mergeSort(int arr[], int left, int right) {
-    if (left >= right) return;
-
-    int mid = left + (right - left) / 2;
-
-    mergeSort(arr, left, mid);
-    mergeSort(arr, mid + 1, right);
-
-    merge(arr, left, mid, right);
+void MS(vector<int> &v, int low, int high){
+    if(low == high) return;
+    int mid = (low+high)/2;
+    MS(v,low,mid); // keep partitioning the vector into two halves till the size of each half is 1.
+    MS(v,mid+1,high); // 2nd partiiton recursively will be from mid + 1 to high 
+    merge(v,low,mid,high); // perform merge function on the singular and ahead arrays when backtracking happens 
 }
+int main(){
+    vector<int>v = {10,7,4,6,9,3,8,2,1,5};
+    MS(v,0,9);
+    cout << "The array after sorting is  : " << endl;
+    for(int i=0;i<10;i++){
+        cout << v[i] << " " ;
+    }
 
-void printArray(int arr[], int size) {
-    for (int i = 0; i < size; i++)
-        cout << arr[i] << " ";
-    cout << endl;
-}
-
-int main() {
-    int arr[] = {6, 3, 8, 5, 2, 7, 4, 1};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    cout << "Before sorting:\n";
-    printArray(arr, n);
-
-    mergeSort(arr, 0, n - 1);
-
-    cout << "After sorting:\n";
-    printArray(arr, n);
 
     return 0;
 }
