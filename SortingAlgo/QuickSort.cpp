@@ -32,6 +32,7 @@ int main(){
     for(int i = 0; i < 10; i++){
         cout << arr[i] << " ";
     }
+  //  cout << partition(arr, 0, 9) << endl;
 
     return 0;
 }

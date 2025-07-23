@@ -1,9 +1,8 @@
 
-
 #include <bits/stdc++.h>
 using namespace std;
 
-vector<int> moveZeros(int n, vector<int> a) {
+vector<int> moveZeros(int n, vector<int> &a) {
     int j = -1;
     //place the pointer j:
     for (int i = 0; i < n; i++) {
@@ -13,7 +12,7 @@ vector<int> moveZeros(int n, vector<int> a) {
         }
     }
 
-    //if no 0 is found in the array 
+    //no 0 found in the array 
     if (j == -1) return a;
 
     //Move the pointers i and j
