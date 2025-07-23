@@ -35,7 +35,7 @@ int main() {
     cout << "Marks of Alice: " << marks["Alice"] << endl;
 
     // Finding an element
-    if (marks.find("Bob") != marks.end()) {
+    if (marks.find("Bob") != marks.end()) { // if the thing is found in the map this syntax will return 1 that means true and the element is present in the array 
         cout << "Bob is present.\n";
     }
 
