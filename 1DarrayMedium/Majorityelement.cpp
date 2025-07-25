@@ -11,7 +11,7 @@ int majorityElement(vector<int> v) {
 
     //storing the elements with its occurnce:
     for (int i = 0; i < n; i++) {
-        mpp[v[i]]++;
+        mpp[v[i]]++; // v[i] pe frequency bada deni hai hame 
     }
 
     //searching for the majority element:
