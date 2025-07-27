@@ -2,6 +2,7 @@
 #include <iostream>
 #include <vector>
 using namespace std;
+// maths ka point if we are asked to find elements in the array having more than n/k occurence then there can be atmost k-1 such elements
 
 int findMajorityElement(vector<int>& nums) {
     int count = 0;
