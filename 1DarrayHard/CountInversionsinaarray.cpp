@@ -21,7 +21,7 @@ int merge(vector<int> &arr, int low, int mid,int high){
             right++;
         }
     }
-
+    return cnt;
 }
 int mergeSort(vector<int> &arr, int low , int high){
     int cnt = 0;
