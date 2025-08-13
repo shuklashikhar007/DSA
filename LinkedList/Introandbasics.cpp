@@ -2,12 +2,18 @@
 using namespace std;
 class Node {
     public :
-    int data;
+    int data; // custom data type mai integer data hoga
+    // pointer data type
     Node* next;
     public:
     Node(int data1, Node* next1){
         data = data1;
         next = next1;
+    }
+    Node(int data1){ // agar int main se sirf array ka element pass hua hai to 
+        // ye wala constructor use hoga 
+        data = data1;
+        next = nullptr;
     }
 };
 
