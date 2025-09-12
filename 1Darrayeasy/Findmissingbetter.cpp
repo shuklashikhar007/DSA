@@ -1,11 +1,7 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-
 int missingNumber(vector<int>&a, int N) {
-
     int hash[N + 1] = {0}; //hash array
-
     // storing the frequencies:
     for (int i = 0; i < N - 1; i++)
         hash[a[i]]++;
@@ -13,7 +9,7 @@ int missingNumber(vector<int>&a, int N) {
     //checking the freqencies for numbers 1 to N:
     for (int i = 1; i <= N; i++) {
         if (hash[i] == 0) {
-            return i;
+            return i; // jiski freq 0 usi ko return mar diya
         }
     }
 

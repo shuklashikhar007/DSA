@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// this is the most naive approach 
 int majorityElement(vector<int> v) {
 
     //size of the given array:

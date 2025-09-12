@@ -5,13 +5,15 @@ using namespace std;
 vector < int> FindUnion(int arr1[] , int arr2[] ,  int n , int m){
     vector<int>Union;
     map<int,int>mpp;
+    // map mai unhi elements ki freq ayegi jo dono mai se kisi ek array mai present honge 
+    
     for(int i=0;i<n;i++){
         mpp[arr1[i]++]; // hash the first array 
     }
     for(int i=0;i<m;i++){
         mpp[arr2[i]++]; // hash the second array 
     }
-    for(auto & it : mpp){ // syntax to itrate over a map 
+    for(auto & it : mpp){ // syntax to iterate over a map 
         Union.push_back(it.first);
     }
     return Union;
