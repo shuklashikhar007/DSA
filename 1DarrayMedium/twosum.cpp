@@ -6,7 +6,7 @@ vector<int> twoSum(int n, vector<int> &arr, int target) {
     for (int i = 0; i < n; i++) {
         int num = arr[i];
         int moreNeeded = target - num;
-        if (mpp.find(moreNeeded) != mpp.end()) {
+        if (mpp.find(moreNeeded) != mpp.end()) { // agar hash map mai mil gaya required to return else map[number[i]] = i;
             return {mpp[moreNeeded], i};
         }
         mpp[num] = i;

@@ -7,17 +7,18 @@ using namespace std;
 int findMajorityElement(vector<int>& nums) {
     int count = 0;
     int element = 0;
+    // algo to decide the majority number 
 
-    // Step 1: Find a candidate for majority element
-    for (int num : nums) {
-        if (count == 0) {
+    for(int num : nums){
+        if(count == 0){
             element = num;
         }
 
-        if (num == element) {
+        if(num == element){
             count++;
-        } else {
-            count--;
+        }
+        else{
+            count --;
         }
     }
 

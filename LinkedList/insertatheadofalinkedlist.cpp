@@ -38,7 +38,7 @@ int main(){
     head->next = new Node(arr[1]);
     head->next->next = new Node(arr[2]);
     head->next->next->next = new Node(arr[3]);
-    head = insertHead(head, val); // here we are actually redefining head 
+    head = insertHead(head, val); 
     // abb naya head new element store karne wala head hai
     printLL(head);
     return 0;

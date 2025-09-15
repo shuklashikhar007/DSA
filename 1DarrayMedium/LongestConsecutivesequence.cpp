@@ -15,11 +15,11 @@ int longestSuccessiveElements(vector<int>&a) {
     //Find the longest sequence:
     for (auto it : st) {
         //if 'it' is a starting number:
-        if (st.find(it - 1) == st.end()) { // run the code below this only if a number before the number under considertion is found in the array 
+        if (st.find(it - 1) == st.end()) { // run the code below this only if a number before the number under considertion is not found in the array 
             //find consecutive numbers:
             int cnt = 1;
             int x = it;
-            while (st.find(x + 1) != st.end()) {
+            while (st.find(x + 1) != st.end()) { // jab tak number under considertion ke baad number mil jaye to run the loop
                 x = x + 1;
                 cnt = cnt + 1;
             }

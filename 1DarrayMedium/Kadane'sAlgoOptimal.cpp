@@ -24,8 +24,8 @@ But if this case is not explicitly mentioned we will not consider this case.
 using namespace std;
 
 long long maxSubarraySum(int arr[], int n) {
-    long long maxi = LONG_MIN; // maximum sum
-    long long sum = 0;
+    long long maxi = LONG_MIN; // maximum sum ka vaiable bana liya yaha pe 
+    long long sum = 0; // sum ka variable 
 
     for(int i=0;i<n;i++){
         sum += arr[i];

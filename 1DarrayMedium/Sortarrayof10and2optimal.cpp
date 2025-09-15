@@ -15,7 +15,7 @@ void sort(vector<int> &arr){
             mid++; // 1 hai yaha pe that means it's already at correct position so move ahead 
         }
         else{
-            // agar 2 hai yaha to already sahi jagah pe hai to keep it there 
+            // agar 2 hai yaha pe to swap it with the nearest high position and decrease the high value
             swap(arr[mid],arr[high]);
             high--;
         }

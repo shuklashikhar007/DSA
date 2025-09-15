@@ -25,7 +25,7 @@ int main(){
 
     for(int i = 1;i< arr.size();i++){
         Node* newNode = new Node(arr[i]);
-        current->next = newNode; // change the thing to which the pointer points from null pointer to the location of the next node
+        current->next = newNode; // change the thing to which the pointer points from the location of prev node  to the location of the next node
         current = newNode;
     }
 
