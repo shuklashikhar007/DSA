@@ -14,7 +14,7 @@ vector<vector<int>> threeSum(vector<int> nums) {
                 sort(triplet.begin(), triplet.end());
                 st.insert(triplet);
             }
-            hashset.insert(nums[j]); // otherwise nahi mila third to place it in the hashset for the future use 
+            hashset.insert(nums[j]); // otherwise nahi mila ya mil to bhi third to place it in the hashset for the future use 
         }
     }
 

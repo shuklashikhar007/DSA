@@ -36,7 +36,7 @@ vector<vector<int>> fourSum(vector<int>& nums, int target) {
                     while (k < l && nums[l] == nums[l + 1]) l--; // agge wale mai l+1
                 }
                 else if (sum < target) k++;
-                else l--;
+                else if(sum > target) l--;// sum agar target se bada hogaya to decrease the largest number here 
             }
         }
     }

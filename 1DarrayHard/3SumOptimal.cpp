@@ -26,6 +26,7 @@ vector<vector<int>> threeSum(vector <int> nums){
                 j++;
                 k--;
             }
+            // skip the duplicates next to the jth and kth index 
             while(j<k && nums[j] == nums[j-1]){
                 j++;
             }
@@ -38,7 +39,7 @@ vector<vector<int>> threeSum(vector <int> nums){
 }
 int main(){
     vector<int> nums = {-1, 0, 1, 2, -1, -4};
-    vector<vector<int>> ans = threeSum(nums);
+    vector<vector<int>> ans = threeSum(nums); // store the triplets in a 2D array 
     for (auto triplet : ans) {
         for (auto num : triplet) {
             cout << num << " ";
