@@ -50,15 +50,12 @@ Node* findMiddle(Node* head){
     if(head == nullptr || head->next == nullptr){
         return head;
     }
-
     Node * slow = head;
-    Node* fast = head;
-
+    Node* fast = head->next;
     while(fast != nullptr && fast->next != nullptr){
         slow = slow->next;
         fast = fast->next->next;
     }
-
     return slow;
 }
 // imp -> this is the function to perform merge sort on a linked list
