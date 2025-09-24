@@ -37,7 +37,7 @@ Node* reverseDLL(Node* head){
     Node* last = NULL;
     Node* current = head;
     while(current != NULL){
-        Node* last = current->back;
+        Node* last = current->back; // last ko define kiya pehle
         current->back = current->next;
         current->next = last;
         current = current->back;
