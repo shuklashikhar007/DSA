@@ -1,0 +1,4 @@
+// there are three problems in notes
+1) delete all occurences of a key in DLL
+2) remove duplicates
+3) find pairs with given sum in DLL
