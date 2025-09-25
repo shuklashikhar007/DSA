@@ -16,7 +16,6 @@ public:
 Node* mergeTwoSortedLinkedLists(Node* list1, Node* list2){
     Node* dummynode = new Node(-1);
     Node* temp = dummynode;
-
     while(list1 != nullptr && list2 != nullptr){
         // compare elements of both lists and 
         // link the smaller node to the merged list
