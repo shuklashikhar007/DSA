@@ -5,7 +5,7 @@ long long solve(vector<int>&arr){
     long long prev = arr[0];
     long long prev2 = 0;
 
-    for(int i = 1 ; i <=n ; i++){
+    for(int i = 1 ; i <n ; i++){
         long long pick = arr[i];
         if(i>1){
             pick += prev2;
@@ -15,6 +15,7 @@ long long solve(vector<int>&arr){
         prev2 = prev;
         prev = cur;
     }
+    return prev;
 }
 long long int robstreet(int n, vector<int>&arr){
     vector<int>arr1;
