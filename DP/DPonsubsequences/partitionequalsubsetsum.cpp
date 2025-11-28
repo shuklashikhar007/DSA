@@ -8,11 +8,9 @@ bool subsetSumUtil(int ind, int target, vector<int>& arr, vector<vector<int>>& d
     // Base case: If the target sum is 0, we found a valid partition
     if (target == 0)
         return true;
-
     // Base case: If we have considered all elements and the target is still not 0, return false
     if (ind == 0)
         return arr[0] == target;
-
     // If the result for this state is already calculated, return it
     if (dp[ind][target] != -1)
         return dp[ind][target];

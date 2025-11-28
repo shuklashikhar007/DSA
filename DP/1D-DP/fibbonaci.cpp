@@ -3,7 +3,7 @@
 using namespace std;
 int f(int n, vector<int>&dp){
     if(n <= 1) return n; // recursion base case 
-    if(dp[n] != -1) return dp[n]; // memoization
+    if(dp[n] != -1) return dp[n]; // memoization ( using stored values )
     return dp[n] = f(n-1,dp) + f(n-2,dp);
 }
 int main(){

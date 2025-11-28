@@ -1,3 +1,6 @@
+// modified house robber problem 
+// just break the array into two parts and then take max of both the cases as your answer
+
 #include<bits/stdc++.h>
 using namespace std;
 long long solve(vector<int>&arr){

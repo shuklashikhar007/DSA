@@ -1,3 +1,4 @@
+// space optimized even without using a array we can solve it
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
