@@ -2,7 +2,6 @@
 using namespace std;
 // yaha pe base case jaldi sochne ka tarika
 // -> think about the smallest possible input and output which will be index == 0 and target == 0 in this case here
-// 
 // Function to check if it's possible to partition the array into two subsets with equal sum
 bool subsetSumUtil(int ind, int target, vector<int>& arr, vector<vector<int>>& dp) {
     // Base case: If the target sum is 0, we found a valid partition

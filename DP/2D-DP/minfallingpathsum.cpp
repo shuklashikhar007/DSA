@@ -16,7 +16,7 @@ public:
             return matrix[row][col];
         }
 
-        // If result is already computed, return from dp
+        // If result is already computed, return from dp memory
         if (dp[row][col] != -1) {
             return dp[row][col];
         }
@@ -52,6 +52,7 @@ public:
         return minSum;
     }
 };
+
 
 int main() {
     vector<vector<int>> matrix = {

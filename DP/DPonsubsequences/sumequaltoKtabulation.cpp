@@ -1,7 +1,6 @@
 // Tabulation approach of the problem
 #include <bits/stdc++.h>
 using namespace std;
-
 // Function to check if there is a subset of 'arr' with a sum equal to 'k'
 bool subsetSumToK(int n, int k, vector<int> &arr) {
     // Initialize a 2D DP array with dimensions (n x k+1) to store subproblem results

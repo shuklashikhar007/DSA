@@ -1,6 +1,6 @@
+// tabulation approach for the same problem 
 #include <bits/stdc++.h>
 using namespace std;
-
 int minFallingPathSum(vector<vector<int>>& matrix) {
     int n = matrix.size();
     int m = matrix[0].size();
