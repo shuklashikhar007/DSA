@@ -1,10 +1,9 @@
 // This is the Better Approach to Kadane's Algorithm 
+// O(n^2)  Solution -> will 100 % lead to TLE in CP
 #include <bits/stdc++.h>
 using namespace std;
-
 int maxSubarraySum(int arr[], int n) {
     int maxi = INT_MIN; // maximum sum
-
     for (int i = 0; i < n; i++) {
         int sum = 0;
         for (int j = i; j < n; j++) {
@@ -17,7 +16,6 @@ int maxSubarraySum(int arr[], int n) {
             maxi = max(maxi, sum); // getting the maximum
         }
     }
-
     return maxi;
 }
 
