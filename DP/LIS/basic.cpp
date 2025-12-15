@@ -1,26 +1,60 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-int f(int i, int prev, vector<int>&a, vector<vector<int>> &dp){
-    int n = a.size();
-    if(i==n) return 0;
-    if(dp[i][prev+1] != -1) return dp[i][prev+1];
-    int nottake = f(i+1,prev,a,dp);
-    int take =0 ;
-    if(prev == -1 || a[i] > a[prev]){
-        take = 1 + f(i+1,i,a,dp); // put prev = current and i to i + 1
+
+class Solution {
+private:
+    // Helper function to find the length of LIS
+    int func(int i, int prevInd, vector<int> &arr, vector<vector<int>> &dp) {
+        
+        // base case
+        if(i == arr.size() - 1) {
+            if(prevInd == -1 || arr[prevInd] < arr[i]) return 1;
+            return 0;
+        }
+        
+        // If subproblem is already calculated
+        if(dp[i][prevInd + 1] != -1) return dp[i][prevInd + 1];
+        
+        // Not Take case
+        int notTake = func(i+1, prevInd, arr, dp);
+        
+        int take = 0; // Take case
+        
+        // If no element is chosen till now
+        if(prevInd == -1)
+            take = func(i+1, i, arr, dp) + 1;
+        
+        /* Else the current element can be 
+        taken if it is strictly increasing */
+        else if(arr[i] > arr[prevInd])
+            take = func(i+1, i, arr, dp) + 1;
+        
+        // Return the maximum length obtained from both cases
+        return dp[i][prevInd + 1] = max(take, notTake);
     }
-    return dp[i][prev+1] = max(take, nottake);
-}
-int LIS(vector<int>&a){
-    int n = a.size();
-    vector<vector<int>> dp(n, vector<int>(n+1,-1)); // prev jayega from -1 to n-1 which is n+1 cols and ind from o t0 n-1 which is n
-    return f(0,-1,a,dp); // intially prev ind = -1 represents no prev element
-}
-int main(){
-    int n;
-    cin >> n;
-    vector<int>arr(n);
-    for(int i=0;i<n;i++) cin >> arr[i];
-    cout << LIS(arr) << endl;
+    
+public:
+    /* Function to find the longest increasing 
+    subsequence in the given array */
+    int LIS(vector<int>& nums) {
+        int n = nums.size();
+        
+        // DP array
+        vector<vector<int>> dp(n, vector<int>(n+1, -1));
+        
+        return func(0, -1, nums, dp);
+    }    
+};
+
+
+int main() {
+    vector<int> nums = {10, 9, 2, 5, 3, 7, 101, 18};
+    
+    // Creating an object of Solution class
+    Solution sol;
+    int lengthOfLIS = sol.LIS(nums);
+    
+    cout << "The length of the LIS for the given array is: " << lengthOfLIS << endl;
+    
     return 0;
 }
