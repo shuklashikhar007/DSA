@@ -5,9 +5,9 @@ int LCS(string a, string b,int ind1 ,int ind2, vector<vector<int>> &dp){
     if(ind1 < 0 || ind2 < 0) return 0;
     if(dp[ind1][ind2] != -1) return dp[ind1][ind2];
     if(a[ind1] == b[ind2]){ // matlab match hogaya
-        return 1 + LCS(a,b,ind1-1,ind2-1,dp);
+        return  dp[ind1][ind2] =  1 + LCS(a,b,ind1-1,ind2-1,dp);
     }
-    return dp[ind1][ind2] = max(LCS(a,b,ind1-1,ind2,dp),LCS(a,b,ind1,ind2-1,dp));
+    else return dp[ind1][ind2] = max(LCS(a,b,ind1-1,ind2,dp),LCS(a,b,ind1,ind2-1,dp));
 }
 int main(){
     string a,b;

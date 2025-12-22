@@ -1,0 +1,36 @@
+// To find Topo sort using BFS ( kahn's Algor)
+#include<bits/stdc++.h>
+using namespace std;
+vector<int> toposort(int V, vector<int>adj[]){
+    int indegree[V] = {0};
+    // abb pehle indegree array fill karege
+    for(int i = 0;i<V;i++){
+        for(auto it : adj[i]){
+            indegree[it]++;
+        }
+    }
+    queue<int>q;
+    for(int i=0;i<V;i++){
+        if(indegree[i] == 0){
+            q.push(i);
+        }
+    }
+    vector<int>topo;
+    while (!q.empty())
+    {
+        int node = q.front();
+        q.pop();
+        topo.push_back(node);
+        for(auto it : adj[node]){
+            indegree[it]--;
+            if(indegree[it] == 0){
+                q.push(it);
+            }
+        }   
+    }
+    return topo;
+}
+int main(){
+
+    return 0;
+}
