@@ -1,7 +1,27 @@
+/*
+Weighted graph
+No negative edges
+Need shortest path
+
+*/
+/*
+Comparison with Other Shortest Path Algorithms
+Algorithm	Handles Negatives	Cycles	Time
+BFS	        ❌	               ✅	O(V+E)
+Topo + DP	✅	                ❌	O(V+E)
+Dijkstra	❌	                ✅	O(E log V)
+Bellman-Ford	✅	            ✅	O(VE)
+
+*/
 #include<bits/stdc++.h>
 using namespace std;
 vector<int> dijkstra(int V, vector<vector<int>> &egdes, int src){
     vector<pair<int,int>> adj[V];
+    vector<int> parent(V+1);
+    // parent arr for backtracking and printing the shortest possible path in this case
+    for(int i=1;i<=V;i++){
+        parent[i] = i;
+    }
     for(auto &e : egdes){
         int u = e[0];
         int v = e[1];
@@ -20,10 +40,20 @@ vector<int> dijkstra(int V, vector<vector<int>> &egdes, int src){
         pq.pop();
         if(d > dist[node]) continue;
         for(auto it : adj[node]){
-            
+            int v = it.first;
+            int w = it.second;
+            if(dist[node] + w < dist[v]){
+                dist[v] = w + dist[node];
+                pq.push({dist[v], v});
+                parent[v] = node; // make a record entry of where we came from to this node in the shortest path case
+            }
         }       
     }
-
+    for (int i = 0; i < V; i++) {
+        if (dist[i] == INT_MAX)
+            dist[i] = -1;
+    }
+    return dist;
 }
 int main(){
     int V = 5;

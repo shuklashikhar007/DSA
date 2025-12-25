@@ -1,3 +1,5 @@
+// Cycle detection in directed graph using topological sorting anf BFS (Kanhs algo)
+
 #include <bits/stdc++.h>
 using namespace std;
 bool isCycle(int V, vector<int> adj[]) {
