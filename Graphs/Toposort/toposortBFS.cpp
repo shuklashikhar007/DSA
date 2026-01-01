@@ -3,7 +3,6 @@
 using namespace std;
 vector<int> toposort(int V, vector<int>adj[]){
     int indegree[V] = {0};
-    // abb pehle indegree array fill karege
     for(int i = 0;i<V;i++){
         for(auto it : adj[i]){
             indegree[it]++;
