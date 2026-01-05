@@ -44,16 +44,20 @@ class Solution{
         while(!st.empty()){
             int node = st.top();
             st.pop();
-            // relax all the edges ( ye actually mai hota kya hai)
+            // topo sort ke order mai jo node ayi hai uske neighbours pe jake do cheezo ka reference lenge pehle jo neigh node hai uski value
+            // aur dusra uska weight
+            // 
             for(auto it :  adj[node]){
                 int v = it.first;
                 int wt = it.second;
                 if(dist[node] + wt < dist[v]){
                     dist[v] = wt + dist[node];
                 }
+                /// yaha par since topo sort ka order follow kar rahe hai to ek bar distance update hoke
+                // jo distance ayega wo already shortest distance hoga to there will be no need to push it again and again in stack and do 
+                // traversals again and again
             }
         }
-
         for(int i=0;i<N;i++){
             if(dist[i] == 1e9){
                 dist[i] = -1;

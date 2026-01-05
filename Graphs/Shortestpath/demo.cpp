@@ -40,8 +40,10 @@ vector<int> dijkstra(int V, vector<vector<int>> &egdes, int src){
         int d = pq.top().first; // pq mai topmost element ka source se shortest distance
         int node = pq.top().second; // current node 
         pq.pop();
-     
+        
         for(auto it : adj[node]){
+            // v -> neigh node ki value
+            // w - us particular edge ka weight
             int v = it.first;
             int w = it.second;
             if(dist[node] + w < dist[v]){

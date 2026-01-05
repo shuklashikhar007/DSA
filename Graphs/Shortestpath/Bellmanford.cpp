@@ -10,6 +10,8 @@ public:
 	*/
 	vector<int> bellman_ford(int V, vector<vector<int>>& edges, int S) {
 		vector<int> dist(V, 1e8);
+		// this is very imp
+		// intially only source node has dist 0 because only this is reachable
 		dist[S] = 0;
 		for (int i = 0; i < V - 1; i++) {
 			for (auto it : edges) {
@@ -30,8 +32,6 @@ public:
 				return { -1};
 			}
 		}
-
-
 		return dist;
 	}
 };

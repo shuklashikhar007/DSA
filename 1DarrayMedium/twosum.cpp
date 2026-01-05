@@ -1,6 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// We only look for pairs where the first element comes earlier and the second comes later. ye imp point hai two sum problem ka
+// key kabhi duplicates nahi ho sakti 
 vector<int> twoSum(int n, vector<int> &arr, int target) {
     unordered_map<int, int> mpp;
     for (int i = 0; i < n; i++) {

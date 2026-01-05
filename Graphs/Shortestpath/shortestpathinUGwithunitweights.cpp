@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+// ye sabse basic tarika hai to find shortest distances in graphs etc
 vector<int> shortestPath(int V, vector<vector<int>>& edges, int src) {
     vector<int> adj[V];
     for (auto &e : edges) {
@@ -15,7 +16,6 @@ vector<int> shortestPath(int V, vector<vector<int>>& edges, int src) {
     while (!q.empty()) {
         int node = q.front();
         q.pop();
-
         for (auto it : adj[node]) {
             if (dist[node] + 1 < dist[it]) {
                 dist[it] = dist[node] + 1;
