@@ -1,65 +1,64 @@
 #include<bits/stdc++.h>
 using namespace std;
-class Solution{
-    public:
-    // src and dest cell bhi pass kardenge
-    int shortest(vector<vector<int>> &grid, pair<int, int> src, pair<int,int> dest ){
-        if(src.first == dest.first && src.second == dest.second){
-            return 0;
-        }
-        // BFS ke liye queue jisme cells aur unka dist source se store hoga
-        queue<pair<int,pair<int,int>>>q;
-        int n = grid.size();
-        int m = grid[0].size();
-        vector<vector<int>> dist(n, vector<int>(m,1e9));
-        dist[src.first][src.second] = 0;
-        // src ka khud se distance 0 hai
-        q.push({0, {src.first , src.second}});
-        int dr[] = {-1,0,1,0};
-        int dc[] = {0,1,0,-1};
-        while (!q.empty())
-        {
-            auto it = q.front();
-            q.pop();
-            int dis = it.first;
-            int r = it.second.first;
-            int c = it.second.second;
-            // sare 4 directions mai check karenge
-            for(int i=0;i<4;i++){
-                int nr = r + dr[i];
-                int nc = c + dc[i];
-                if( nr >= 0 && nr < n && nc >= 0 && nc < m && grid[nr][nc]== 1 && dis + 1 < dist[nr][nc] && grid[nr][nc] == 1){
-                    // matlab naya shortest distance milgaya
-                    dist[nr][nc] = 1 + dis;
-                    // update it 
-                    if(nr == dest.first && nc == dest.second){
-                        // matlab we reached our destination
-                        return dis + 1;
-                    }
-                    // else push this into queue for future process
-                    q.push({1+dis  , {nr,nc} });
+class Solution {
+public:
+    using ll = long long;
 
+    int shortestPathBinaryMatrix(vector<vector<int>>& grid) {
+        ll n = grid.size();
+        if(n == 0) return -1;
+
+        // agar start ya end blocked hai to impossible
+        if(grid[0][0] == 1 || grid[n-1][n-1] == 1) return -1;
+
+        // pehle wo point jaha hame pahuchna hai
+        ll destx = n-1, desty = n-1;
+
+        // ye wo point jaha se chalna shuru karna hai hame
+        ll srcx = 0, srcy = 0;
+
+        // queue mai data is form mai hai -> ({distfromsrc , {row,col}})
+        queue<pair<ll, pair<ll,ll>>> q;
+
+        vector<vector<ll>> dist(n, vector<ll>(n, 1e9));
+
+        // BFS start point ka distance 1 hota hai
+        dist[srcx][srcy] = 1;
+        q.push({1, {srcx, srcy}});
+
+        // 8 directions
+        ll dr[] = {-1,-1,-1,0,0,1,1,1};
+        ll dc[] = {-1,0,1,-1,1,-1,0,1};
+
+        while(!q.empty()){
+            auto point = q.front();   // pair<ll, pair<ll,ll>>
+            q.pop();
+
+            ll dis = point.first;
+            ll r = point.second.first;
+            ll c = point.second.second;
+
+            // agar destination mil gaya
+            if(r == destx && c == desty) return dis;
+
+            // abb sari 8 directions check
+            for(int i = 0; i < 8; i++){
+                ll nr = r + dr[i];
+                ll nc = c + dc[i];
+
+                if(nr >= 0 && nr < n && nc >= 0 && nc < n &&
+                   grid[nr][nc] == 0 && dis + 1 < dist[nr][nc]){
+
+                    /// iska matlab naya shortest path milgaya
+                    dist[nr][nc] = dis + 1;   // store naya distance
+                    q.push({dis + 1, {nr, nc}});
                 }
             }
         }
-        return -1;
-
+        return -1; // agar destination kabhi reach hi nahi hua
     }
 };
 int main(){
-    // jaha se chalna start kiya
-    pair<int, int> src= {0,0};
-    // jaha pahuchna hai
-    pair<int,int> dest = {2,2};
-     vector<vector<int>> grid = {{1, 1, 1, 1},
-                                 {1, 1, 0, 1},
-                                 {1, 1, 1, 1},
-                                 {1, 1, 0, 0},
-                                 {1, 0, 0, 1}};
-    Solution obj;
-    int res = obj.shortest(grid, src, dest);
-    // Output the result
-    cout << res << endl;
-
     return 0;
 }
+
