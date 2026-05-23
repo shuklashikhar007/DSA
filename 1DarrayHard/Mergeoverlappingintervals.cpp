@@ -7,7 +7,9 @@ vector<vector<int>> mergeOverlappingIntervals(vector<vector<int>> &arr) {
 
     //sort the given intervals:
     sort(arr.begin(), arr.end());
-
+    // isse ye make sure ho jayega ki the start of each interval is smaller than the next wala
+    // to overlap make sure karne ke liye we only have to do one thing that is 
+    // make sur eki current ka start is smaller than the prev end and agar es ahai to merge them 
     vector<vector<int>> ans;
 
     for (int i = 0; i < n; i++) {

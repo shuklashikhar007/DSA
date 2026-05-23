@@ -1,44 +1,50 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-void merge(long long arr1[], long long arr2[], int n, int m) {
-
-    //Declare 2 pointers:
-    int left = n - 1;
-    int right = 0;
-
-    //Swap the elements until arr1[left] is
-    // smaller than arr2[right]:
-    while (left >= 0 && right < m) {
-        if (arr1[left] > arr2[right]) {
-            swap(arr1[left], arr2[right]);
-            left--, right++;
+#define int long long
+void mergeArrays(vector<int>& a, vector<int>& b, int n, int m) {
+    int l = n - 1;
+    int r = 0;
+    // Swap larger elements of a with smaller elements of b
+    while (l >= 0 && r < m) {
+        if (a[l] > b[r]) {
+            swap(a[l], b[r]);
+            l--;
+            r++;
         }
         else {
             break;
         }
     }
 
-    // Sort arr1[] and arr2[] individually:
-    sort(arr1, arr1 + n);
-    sort(arr2, arr2 + m);
+    // Re-sort both arrays
+    sort(a.begin(), a.end());
+    sort(b.begin(), b.end());
 }
 
-int main()
-{
-    long long arr1[] = {1, 4, 8, 10};
-    long long arr2[] = {2, 3, 9};
-    int n = 4, m = 3;
-    merge(arr1, arr2, n, m);
-    cout << "The merged arrays are: " << "\n";
-    cout << "arr1[] = ";
-    for (int i = 0; i < n; i++) {
-        cout << arr1[i] << " ";
+signed main() {
+
+    int t;
+    cin >> t;
+
+    while (t--) {
+
+        int n, m;
+        cin >> n >> m;
+
+        vector<int> a(n), b(m);
+
+        for (int i = 0; i < n; i++) cin >> a[i];
+        for (int i = 0; i < m; i++) cin >> b[i];
+
+        sort(a.begin(), a.end());
+        sort(b.begin(), b.end());
+
+        mergeArrays(a, b, n, m);
+
+        for (auto x : a) cout << x << " ";
+        for (auto x : b) cout << x << " ";
+        cout << "\n";
     }
-    cout << "\narr2[] = ";
-    for (int i = 0; i < m; i++) {
-        cout << arr2[i] << " ";
-    }
-    cout << endl;
+
     return 0;
 }

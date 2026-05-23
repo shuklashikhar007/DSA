@@ -7,7 +7,7 @@ int find(string s){
     unordered_map<char,int>mpp;
     for(right = 0;right<n;right++){
         char c = s[right];
-        if(mpp.count(c)   && mpp[c] >= left){
+        if(mpp.count(c)   && mpp[c] >= left){ // agar left ke bahar hai to dikkat nahi hai left ke andar nahi hona chaiye ye wala char 
             // matlab ye char pehle bhi a chuka hai 
             left = mpp[c] + 1; // window ko chota kar diya
         }

@@ -18,7 +18,6 @@ public:
         for (int right = 0; right < s.length(); right++) {
             // Increment frequency of current character
             freq[s[right] - 'a']++;
-
             // Shrink the window from the left while all three characters are present
             while (freq[0] > 0 && freq[1] > 0 && freq[2] > 0) {
                 // Count all substrings from current right to end

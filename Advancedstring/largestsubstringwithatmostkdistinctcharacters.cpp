@@ -13,6 +13,7 @@ class Solution {
         for(int right = 0;right< n;right++){
             mpp[s[right]]++;
             while(mpp.size() > k){ // agar number of distinct characters ka count k se jyada hogaya to 
+                // yaha atmost k distinct hai agar exact k distinct hota to we would havse used equal to k here
                 mpp[s[left]]--; // left side vale ki pehle freq kam karo hashmap se uske baad 
                 // ham isse remove kardege
                 // left side se window ko chota karna shuru kardege ham 

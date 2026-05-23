@@ -6,7 +6,7 @@ using namespace std;
 // atmost wali approach yaha isliye kaam kar rahi hai since we have a binary array
 // agar array binary nahi hoti to we cannot apply this approach since only in case of binary numbers will increase and decrease
 // by a single value baki case mai there can be sudden increase or decrease 
-
+// Rev - 1
 int atMost(vector<int>& arr, int goal) {
     if (goal < 0) return 0;
     int left = 0, sum = 0, count = 0;

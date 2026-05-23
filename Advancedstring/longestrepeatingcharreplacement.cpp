@@ -29,6 +29,8 @@ public:
             max_freq = max(max_freq, freq[s[right]]);
 
             // If window is invalid (needs more than k replacements)
+            // ye bhi ek accha tarika hai agar window size - maxfreq k se jyada hai 
+            // to start removing from the left 
             while ((right - left + 1) - max_freq > k) {
 
                 // Decrease frequency of the character at left
