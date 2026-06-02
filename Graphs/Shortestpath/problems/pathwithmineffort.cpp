@@ -28,7 +28,7 @@ class Solution{
             int nc = c + dc[i];
             if(nr >= 0 && nc >= 0 && nr < n && nc < m){
                 int neffort = max(abs(hei[r][c] - hei[nr][nc]) , diff);
-                if(neffort < dist[nr][nc]){
+                if(neffort < dist[nr][nc]){ // agar cur effort already required effort se kam hai to update it 
                     dist[nr][nc] = neffort;
                     pq.push({neffort , {nr , nc}});
                 }

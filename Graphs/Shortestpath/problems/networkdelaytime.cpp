@@ -35,7 +35,7 @@ class Solution{
             }
         }
         // max element isliye because atleast itna time to lag hi jayega
-        int ans = *max_element(dist.begin()+1, dist.end());
+        int ans = *max_element(dist.begin()+1, dist.end()); // basically source node se sabse jyada time konsi node par pahuchne mai lagega
         return ans == INT_MAX ? -1 : ans;
     }
 };

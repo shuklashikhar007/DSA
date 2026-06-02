@@ -41,7 +41,7 @@ class Solution{
                 else if(dis + edw == dist[adjnode]){
                     // so now the number of ways to reach this node will be 
                     // jitne ways se pehle yaha a sakte the ways[adjnode] + ways to reach its parent node
-                    ways[adjnode] = (ways[adjnode] + ways[node]) % mod;
+                    ways[adjnode] = (ways[adjnode] + ways[node]) % mod; // bahut hi imp logic wali line hai ye
                 }
             }
         }

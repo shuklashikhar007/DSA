@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// yaha pe hamne PQ ki jagah Queue kyo use kari ye apne app mai ek bahut accha question hai is problem ka 
 class Solution
 {
 public:
@@ -35,7 +35,7 @@ public:
 
             // If the number of stops exceeds K, continue to the next iteration
             if (stops > K)
-                continue;
+                continue; // thodi si TC improve hogi isse
 
             // Iterate over all the adjacent nodes (next destinations)
             for (auto iter : adj[node])

@@ -1,14 +1,11 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 class Solution{
 public:
     int findcity(int n, int m, vector<vector<int>> &edges, int distanceThreshold){
-
         // Ek 2D dist array bana lenge to apply Floyd Warshall Algo
         // long long use karna zaroori hai kyoki path length bahut bada ho sakta hai
         vector<vector<long long>> dist(n, vector<long long>(n, 1e18));
-
         // har edge ka distance set kardo
         for(auto it : edges){
             // bi directional graph hai to both ways set karege edge distance
@@ -18,12 +15,10 @@ public:
             dist[u][v] = min(dist[u][v], (long long)w);
             dist[v][u] = min(dist[v][u], (long long)w);
         }
-
         for(int i=0;i<n;i++){
             // kyoki dist of a city to itself is 0
             dist[i][i] = 0;
         }
-
         // abb isi distance array mai floyd warshall laga denge
         for(int k=0;k<n;k++){
             for(int i=0;i<n;i++){
@@ -37,13 +32,10 @@ public:
                 }
             }
         }
-
         int cntcity = n;
         int cityno = -1;
-
         for(int city = 0; city < n; city++){
             int cnt = 0;
-
             for(int adjcity = 0 ; adjcity < n ; adjcity++){
                 // khud ko count nahi karna
                 // agar city se adjcity ka distance threshold ke andar hai to count badhao
@@ -51,14 +43,13 @@ public:
                     cnt++;
                 }  
             }
-
             // yaha compare karna hai, inner loop ke baad
-            if(cnt <= cntcity){
+            if(cnt <= cntcity){ // kuch nahi agar current city ka count abhi tak dekhe huye minimum se kam hai to city with the smallest no of 
+                // neigh in a threshold distance update kardege ham yaha par
                 cntcity = cnt;
                 cityno = city;
             }
         }
-
         return cityno;
     }
 };

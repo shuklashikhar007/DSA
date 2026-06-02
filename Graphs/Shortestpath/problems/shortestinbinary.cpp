@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// normal typical dijkstra's algp problem hai ye wali
 class Solution {
 public:
     using ll = long long;
