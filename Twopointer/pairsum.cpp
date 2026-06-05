@@ -1,0 +1,1 @@
+// pair sum ka problem to think about two pointer always 
