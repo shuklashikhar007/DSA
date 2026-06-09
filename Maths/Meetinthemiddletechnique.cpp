@@ -40,6 +40,9 @@ int main() {
         }
         if (it != rightSums.begin()) {
             --it;
+
+
+            
             ll subsetSum = x + *it;
             ans = min(ans, llabs(totalSum - 2 * subsetSum));
         }
