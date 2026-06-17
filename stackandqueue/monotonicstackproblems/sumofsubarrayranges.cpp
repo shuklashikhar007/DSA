@@ -6,22 +6,16 @@ private:
     /* Function to find the indices of 
     next smaller elements */
     vector<int> findNSE(vector<int> &arr) {
-        
         // Size of array
         int n = arr.size();
-        
         // To store the answer
         vector<int> ans(n);
-        
         // Stack 
         stack<int> st;
-        
         // Start traversing from the back
         for(int i = n - 1; i >= 0; i--) {
-            
             // Get the current element
             int currEle = arr[i];
-            
             /* Pop the elements in the stack until 
             the stack is not empty and the top 
             element is not the smaller element */
@@ -44,41 +38,31 @@ private:
     /* Function to find the indices of 
     next greater elements */
     vector<int> findNGE(vector<int> &arr) {
-        
         // Size of array
         int n = arr.size();
-        
         // To store the answer
         vector<int> ans(n);
-        
         // Stack 
         stack<int> st;
-        
         // Start traversing from the back
         for(int i = n - 1; i >= 0; i--) {
-            
             // Get the current element
             int currEle = arr[i];
-            
             /* Pop the elements in the stack until 
             the stack is not empty and the top 
             element is not the greater element */
             while(!st.empty() && arr[st.top()] <= currEle){
                 st.pop();
             }
-            
             // Update the answer
             ans[i] = !st.empty() ? st.top() : n;
-            
             /* Push the index of current 
             element in the stack */
             st.push(i);
         }
-        
         // Return the answer
         return ans;
     }
-    
     /* Function to find the indices of 
     previous smaller or equal elements */
     vector<int> findPSEE(vector<int> &arr) {
