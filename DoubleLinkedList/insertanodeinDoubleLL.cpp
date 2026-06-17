@@ -63,7 +63,7 @@ Node* insertattail(Node* head, int k){
         tail = tail->next;
     }
     // connect the new node to the last node jo list mai hai
-    tail->next = newNode;
+    tail->next = newNode; // similar to LL bas yaha pe dono side connections banane hai hame 
     newNode-> back = tail;
     return head;
 }

@@ -9,7 +9,7 @@ vector<int>depth;
 /*
 dfs(node, uska parent)
 up[node][0] = immediate parent of node
-up[node][j] = 2^th ancestor of the node 
+up[node][j] = 2^jth ancestor of the node 
 depth[node] = distance from root
 */
 void dfs(int node, int parent){
@@ -18,7 +18,7 @@ void dfs(int node, int parent){
         up[node][j] = up[up[node][j-1]][j-1];
     }
     for(int ch : adj[node]){
-        if(ch == parent){ /// ye dikkat agar directed tree hai to nahi ayegi 
+        if(ch == parent){ /// ye dikkat agar undirected tree hai to nahi ayegi 
             continue;
         }
         depth[ch] = depth[node] + 1;

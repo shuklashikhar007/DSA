@@ -43,7 +43,7 @@ Node* removeduplicates(Node* head){
         if(nextnode != NULL){
             nextnode -> back = temp; // backlink
         } 
-        temp = nextnode;
+        temp = nextnode; // basically we skipped through all the same value wali nodes
     }
     return head;
 }

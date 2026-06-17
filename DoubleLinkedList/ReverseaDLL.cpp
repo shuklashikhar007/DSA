@@ -29,20 +29,20 @@ Node* convertarr2DLL(vector<int>arr){
     }
     return head;
 }
-Node* reverseDLL(Node* head){
-    if(head == NULL || head->next == NULL){
-        // if there is a single element in the DLL or none
+Node* reverseDLL(Node* head) {
+    if(head == NULL || head->next == NULL) {
         return head;
     }
-    Node* last = NULL;
-    Node* current = head;
-    while(current != NULL){
-        Node* last = current->back; // last ko define kiya pehle
-        current->back = current->next;
-        current->next = last;
-        current = current->back;
+    Node* prev = NULL;
+    Node* curr = head;
+    while(curr != NULL) {
+        Node* front = curr->next;
+        curr->next = prev;
+        curr->back = front;
+        prev = curr;
+        curr = front;
     }
-    return last->back; // naya head of the reverser DLL;
+    return prev;
 }
 void printLL(Node * head){
     Node* temp = head;

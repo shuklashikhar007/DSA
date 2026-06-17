@@ -59,11 +59,9 @@ Node* deleteTail(Node * head){
         // traverse to the last node (tail)
         tail = tail->next;
     }
-
     Node* newtail = tail->back;
     newtail->next = nullptr;
     tail->back = nullptr;
-
     delete tail;
     return head;
 }
