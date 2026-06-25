@@ -52,7 +52,7 @@ public:
 
         for(int i = 0; i < n; i++) {
             for(int j = 0; j < m; j++) {
-
+                // starting mai jitne 1 honge utne island honge present 
                 if(grid[i][j] == '1')
                     islands++;
             }
