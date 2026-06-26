@@ -71,5 +71,68 @@ class segmenttree{
 };
 int main(){
     // same code can be used to solve max min in range wali problem as well
+    // list of all possible problems jo isse solve hoti hai
+    /*
+    Range Sum Query
+Range Minimum Query (RMQ)
+Range Maximum Query
+Range GCD Query
+Range LCM Query
+Range XOR Query
+Range AND Query
+Range OR Query
+Range Product Query
+Point Update + Range Query
+Range Update + Point Query
+Range Update + Range Query (Lazy Propagation)
+Count of Ones in a Range
+Count of Zeros in a Range
+Count of Even/Odd Numbers
+Count of Positive/Negative Numbers
+Frequency of an Element in a Range
+Majority Element Query
+Maximum Prefix Sum Query
+Maximum Suffix Sum Query
+Maximum Subarray Sum Query
+Minimum Subarray Sum Query
+Longest Consecutive Ones
+Longest Consecutive Zeros
+Balanced Parentheses Queries
+K-th One Query
+K-th Zero Query
+K-th Smallest Element (with frequency tree)
+Order Statistics
+First Element Greater Than X
+First Element ≥ X
+Last Element ≤ X
+Lower Bound on Prefix Sum
+Hotel Room Allocation
+Dynamic Inversion Count
+Dynamic Frequency Queries
+Distinct Elements in a Range (advanced variants)
+Merge Sort Tree Queries
+Maximum Pair Sum Query
+Maximum Difference Query
+Minimum Difference Query
+Matrix Multiplication Queries
+Polynomial Evaluation Queries
+Affine Transformation Queries
+Function Composition Queries
+Range Assignment Updates
+Range Addition Updates
+Range Multiplication Updates
+Range Flip (0 ↔ 1)
+Range Toggle Queries
+Segment Tree Beats (Range Chmin/Chmax/Add)
+Persistent Segment Tree Queries
+2D Segment Tree Queries
+Dynamic Segment Tree Queries
+Coordinate Compression + Segment Tree Problems
+Offline Query Processing with Segment Tree
+Sweep Line + Segment Tree Problems
+Rectangle Union Area
+Skyline Problem
+Interval Overlap Queries
+    */
     return 0;
 }
