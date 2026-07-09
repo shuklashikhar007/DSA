@@ -19,7 +19,7 @@ bool cmpSecondAsc(pair<int,int> a, pair<int,int> b){
 }
 
 // pair -> second ascending, first descending
-bool cmpSecondAscFirstDesc(pair<int,int> a, pair<int,int> b){
+static bool cmpSecondAscFirstDesc(pair<int,int> a, pair<int,int> b){ // static keyword is important on leetcode 
     if(a.second == b.second){
         return a.first > b.first;
     }
