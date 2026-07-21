@@ -9,10 +9,10 @@ int f(int ind, int buy, vector<int>&arr, vector<vector<int>> &dp){
     // agar call me buy = 0 matlab we have to sell thestock
     if(dp[ind][buy] != -1) return dp[ind][buy];
     int profit  = 0;
-    if(buy){ // agar uss index par stock buy kiya to
+    if(buy){ // agar uss index par stock buy karna hai to
         profit = max(-arr[ind]  + f(ind+1,0,arr,dp) , f(ind+1,1,arr,dp));
     }
-    else{ // agar uss index pe hamne stock sell kiya to
+    else{ // agar uss index pe hamne stock sell karna hai to
         // do options ya to sell karege ya to nahi karege
         profit = max(arr[ind] + f(ind+1, 1,arr,dp), 0 + f(ind+1,0,arr,dp));
     }

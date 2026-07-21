@@ -1,5 +1,6 @@
 // yaha pe we can buy a stock only if we have sold the previous one
 // yaha pe 3D DP lagegi 
+// is question mai stock sell krne par cap hai ki max kitne hi stock sell kar sakte hai ham yaha pe 
 #include<bits/stdc++.h>
 using namespace std;
 int f(int ind, int buy,int cap, vector<int>&arr, vector<vector<vector<int>>> &dp){
