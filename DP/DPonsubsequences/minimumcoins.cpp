@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int findcoins(int ind, int target, vector<int>& arr, vector<vector<int>> &dp) {
     // base cases
     if (ind == 0) {
@@ -8,10 +7,8 @@ int findcoins(int ind, int target, vector<int>& arr, vector<vector<int>> &dp) {
         else return INT_MAX; 
     }
     if (dp[ind][target] != -1) return dp[ind][target];
-
     // not take
     int nottake = findcoins(ind - 1, target, arr, dp);
-
     // take (unbounded - can take same coin again)
     int take = INT_MAX;
     if (arr[ind] <= target) {

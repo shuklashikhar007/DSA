@@ -7,27 +7,21 @@ using namespace std;
 int subsets(vector<int>& nums, int target) {
     int n = nums.size();
     vector<vector<int>> dp(n, vector<int>(target + 1, 0));
-
     // Base case: sum = 0 → 1 subset (empty set)
     for (int i = 0; i < n; i++)
         dp[i][0] = 1;
-
     // Base case: using only nums[0]
     if (nums[0] <= target)
         dp[0][nums[0]] = 1;
-
     for (int i = 1; i < n; i++) {
         for (int t = 0; t <= target; t++) {
             int nottake = dp[i - 1][t];
             int take = 0;
-
             if (nums[i] <= t)
                 take = dp[i - 1][t - nums[i]];
-
             dp[i][t] = nottake + take;
         }
     }
-
     return dp[n - 1][target];
 }
 

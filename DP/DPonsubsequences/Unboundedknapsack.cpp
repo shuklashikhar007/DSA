@@ -2,10 +2,8 @@
 // Unbounded knapsack or bounded mai diff hai that we can infinite supply of a particular article 
 // jo hame churana hai
 // so we can stand at a index and when we select a element we can keep on selecting it 
-
 #include <bits/stdc++.h>
 using namespace std;
-
 int unbounded_memo(int idx, int cap, const vector<int>& wt, const vector<int>& val, vector<vector<int>>& dp) {
     if (cap == 0) return 0;
     if (idx == 0) {
@@ -13,14 +11,11 @@ int unbounded_memo(int idx, int cap, const vector<int>& wt, const vector<int>& v
         return (cap / wt[0]) * val[0];
     }
     if (dp[idx][cap] != -1) return dp[idx][cap];
-
     // not take this item
     int notTake = unbounded_memo(idx - 1, cap, wt, val, dp);
-
     // take this item (since unbounded, stay at same idx)
     int take = INT_MIN;
     if (wt[idx] <= cap) take = val[idx] + unbounded_memo(idx, cap - wt[idx], wt, val, dp);
-
     dp[idx][cap] = max(take, notTake);
     return dp[idx][cap];
 }

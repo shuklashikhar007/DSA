@@ -5,15 +5,14 @@ using ll = long long;
 ll ways_tab_2d(const vector<int>& coins, int target) {
     int n = coins.size();
     vector<vector<ll>> dp(n, vector<ll>(target + 1, 0));
-
     // base: there is 1 way to make sum 0 with any set of coins
     for (int i = 0; i < n; ++i) dp[i][0] = 1;
-
     // fill base row: using only coin 0
     for (int t = 0; t <= target; ++t) {
+        // jo target value coin[0] se divide hojaye that can be a valid way 
+        // else nahi hoga wo ek valid way 
         dp[0][t] = (t % coins[0] == 0) ? 1 : 0;
     }
-
     for (int i = 1; i < n; ++i) {
         for (int t = 1; t <= target; ++t) {
             ll notTake = dp[i - 1][t];

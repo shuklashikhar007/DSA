@@ -3,7 +3,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 using ll = long long;
-
 ll ways_memo(int idx, int target, const vector<int>& coins, vector<vector<ll>>& dp) {
     if (target == 0) return 1;           // one way: pick nothing
     if (idx == 0) {
@@ -11,17 +10,13 @@ ll ways_memo(int idx, int target, const vector<int>& coins, vector<vector<ll>>& 
         return (target % coins[0] == 0) ? 1 : 0;
     }
     if (dp[idx][target] != -1) return dp[idx][target];
-
     // not take coin idx
     ll notTake = ways_memo(idx - 1, target, coins, dp);
-
     // take coin idx (if fits)
     ll take = 0;
     if (coins[idx] <= target) take = ways_memo(idx, target - coins[idx], coins, dp);
-
     return dp[idx][target] = notTake + take;
 }
-
 int main() {
     vector<int> coins = {1, 2, 3};
     int target = 4;

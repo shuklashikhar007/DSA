@@ -3,7 +3,8 @@
 using namespace std;
 bool recursion(int index, int target, vector<int> &arr, vector<vector<int>> &dp) {
     if (target == 0) return true;  // Empty subset gives sum 0
-    if (index == 0) return (arr[0] == target);
+    if (index == 0) return (arr[0] == target); // agar last element cur req target ke barabar hai to true
+    // else false hi return karege 
     if (dp[index][target] != -1)
         return dp[index][target];
     bool notpick = recursion(index - 1, target, arr, dp);
