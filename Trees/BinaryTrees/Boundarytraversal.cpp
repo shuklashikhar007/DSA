@@ -1,8 +1,6 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
-
 // Node structure for the binary tree
 struct Node {
     int data;
@@ -10,17 +8,20 @@ struct Node {
     Node* right;
     // Constructor to initialize
     // the node with a value
-    Node(int val) : data(val), left(nullptr), right(nullptr) {}
+    Node(int val){
+        data = val;
+        left = nullptr;
+        right = nullptr;
+    }
 };
-
 class Solution {
 public:
     // Function to check
     // if a node is a leaf
     bool isLeaf(Node* root) {
-        return !root->left && !root->right;
+        if(root->left == nullptr && root->right == nullptr) return true;
+        else return false;
     }
-
     // Function to add the
     // left boundary of the tree
     void addLeftBoundary(Node* root, vector<int>& res) {
@@ -62,11 +63,12 @@ public:
         }
         // Reverse and add the values from
         // the temporary vector to the result
+        // ye important cheez hai since we traversed from bottom to top
+        // but yaha pe hame jarrurat top to bottom ki hai 
         for (int i = temp.size() - 1; i >= 0; --i) {
             res.push_back(temp[i]);
         }
     }
-
     // Function to add the
     // leaves of the tree
     void addLeaves(Node* root, vector<int>& res) {
@@ -85,7 +87,6 @@ public:
             addLeaves(root->right, res);
         }
     }
-
     // Main function to perform the
     // boundary traversal of the binary tree
     vector<int> printBoundary(Node* root) {
