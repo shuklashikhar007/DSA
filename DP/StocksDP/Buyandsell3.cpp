@@ -4,7 +4,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int f(int ind, int buy,int cap, vector<int>&arr, vector<vector<vector<int>>> &dp){
-    if(ind == arr.size()){
+    if(ind == arr.size() || cap == 0){
         return 0;
     }
     // agar call me buy = 1 matlab stock kharidna hai

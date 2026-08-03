@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 // Structure to represent a binary tree node
 struct TreeNode {
     int val;
@@ -9,7 +8,6 @@ struct TreeNode {
     // Constructor to initialize node with a value
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
 };
-
 class Solution {
 public:
     // Function to count the number of nodes in a complete binary tree
@@ -30,7 +28,6 @@ public:
         // Otherwise, recursively count left and right subtrees
         return 1 + countNodes(root->left) + countNodes(root->right);
     }
-
     // Helper function to find height of leftmost path
     int findHeightLeft(TreeNode* node) {
         int height = 0;

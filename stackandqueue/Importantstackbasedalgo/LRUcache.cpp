@@ -45,7 +45,7 @@ public:
         if (mp.find(key) == mp.end())
             return -1; // nahi mili key to 
         Node* node = mp[key]; // us key ka reference in O(1)
-        deleteNode(node); // ye actually mai delete nahi hota hai here we basically remove it from the links and add it later on 
+        deleteNode(node); // ye actually mai delete nahi hota hai here we basically remove it from the links and add it later on.
         insertAfterHead(node);
         return node->value;
     }

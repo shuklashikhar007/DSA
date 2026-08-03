@@ -1,23 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-
 // ======================
 // CUSTOM STRUCT
 // ======================
-
 struct Node{
     int x, y, z;
 };
-
 // ======================
 // SORT COMPARATORS
 // ======================
-
 // pair -> second ascending
 bool cmpSecondAsc(pair<int,int> a, pair<int,int> b){
     return a.second < b.second;
 }
-
 // pair -> second ascending, first descending
 static bool cmpSecondAscFirstDesc(pair<int,int> a, pair<int,int> b){ // static keyword is important on leetcode 
     if(a.second == b.second){
@@ -25,7 +20,6 @@ static bool cmpSecondAscFirstDesc(pair<int,int> a, pair<int,int> b){ // static k
     }
     return a.second < b.second;
 }
-
 // Node -> x descending, y ascending
 bool cmpNode(Node a, Node b){
     if(a.x == b.x){
@@ -33,25 +27,26 @@ bool cmpNode(Node a, Node b){
     }
     return a.x > b.x;
 }
-
 // ======================
 // PRIORITY QUEUE COMPARATORS
 // ======================
-
 // smallest second element on top
 struct MinSecond{
     bool operator()(pair<int,int> a, pair<int,int> b){
         return a.second > b.second;
     }
 };
-
 // largest second element on top
 struct MaxSecond{
     bool operator()(pair<int,int> a, pair<int,int> b){
         return a.second < b.second;
     }
 };
+struct comare{
+    bool operator()(pair<int,int>a, pair<int,int>b){
 
+    }
+};
 // smallest x on top
 struct MinX{
     bool operator()(Node a, Node b){
@@ -101,6 +96,7 @@ int main(){
 
 
     // lambda sort
+    // pass by reference hoga yaha par 
     sort(vp.begin(), vp.end(), [](auto &a, auto &b){
         return a.first < b.first;
     });
