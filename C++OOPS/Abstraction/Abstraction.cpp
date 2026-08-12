@@ -27,7 +27,6 @@ public:
 class CreditCardPayment : public PaymentMethod {
 private:
     string cardNumber;
-
 public:
     CreditCardPayment(string card) : cardNumber(card) {}
 

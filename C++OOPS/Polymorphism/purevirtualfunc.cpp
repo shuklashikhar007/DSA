@@ -4,7 +4,9 @@ using namespace std;
 class Animal
 {
 public:
-    virtual void speak() = 0; // ye ek pure virtual function hai 
+    virtual void speak() = 0;  // this is a pure virtual function
+    // so ye wali class ek abstract class hogi 
+    // is function ka implementation derived classes mai hona hi chaiye warna the code will not work properly  
 };
 class Dog : public Animal{
     public:
@@ -28,5 +30,9 @@ int main(){
     a->speak();
     a = &c; // now this pointer point to cat
     a->speak();
+    Animal *b;
+    Dog t;
+    b = &t;
+    b->speak();
     return 0;
 }

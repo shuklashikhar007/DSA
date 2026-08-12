@@ -53,7 +53,7 @@ private:
 
 public:
     Bike(string b, int speed, bool gear)
-        : Vehicle(b, speed), hasGear(gear) {
+        : Vehicle(b,speed), hasGear(gear) {
         cout << "[Bike constructor called]\n";
     }
 

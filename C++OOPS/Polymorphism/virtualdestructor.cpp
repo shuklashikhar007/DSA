@@ -4,6 +4,9 @@ using namespace std;
 class Animal
 {
 public:
+    Animal(){
+        cout << "Base class constructor called" << endl;
+    }
     virtual ~Animal()
     {
         cout<<"Animal destroyed\n";
@@ -13,6 +16,9 @@ public:
 class Dog : public Animal
 {
 public:
+    Dog(){
+        cout << "Derived class constructor has been called" << endl;
+    }
     ~Dog()
     {
         cout<<"Dog destroyed\n";
