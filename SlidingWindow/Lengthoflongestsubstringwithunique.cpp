@@ -15,6 +15,7 @@ int solve(string str) {
   {
     if (set.find(str[r]) != set.end()) //if duplicate element is found
     {
+      // abb jab tak ye element hat nahi jata keep removing from the left 
       while (l < r && set.find(str[r]) != set.end()) {
         set.erase(str[l]);
         l++;

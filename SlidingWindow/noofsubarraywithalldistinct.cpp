@@ -1,4 +1,5 @@
 // accha question to revise sliding window concept
+// easy problem hai ye wali actually mai 
 #include<bits/stdc++.h>
 using namespace std;
 using ll = long long;

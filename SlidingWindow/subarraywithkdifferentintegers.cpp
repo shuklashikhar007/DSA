@@ -1,3 +1,4 @@
+// important pattern hai ye 
 // Subarray with k different integers a good subarray is defined as a continous subarray that contains exactly k distinct integers
 // yaha bhi wahi atmost k wali strategy lagayege
 // pehle ek function bana lo atmost() uske baad hamara answer hoga 
@@ -24,7 +25,6 @@ class Solution{
                     }
                     left++;
                 }
-
                 // count all the subarray's ending at the current right 
                 count += (right - left + 1);
             }
