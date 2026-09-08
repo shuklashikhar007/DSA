@@ -54,6 +54,5 @@ int main(){
     else{
         cout << "We can make m bouquets on day " << ans << endl;
     }
-
     return 0;
 }

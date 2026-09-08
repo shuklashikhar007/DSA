@@ -6,7 +6,6 @@ int length(string s){
     int right = 0;
     int maxlen =0;
     unordered_map<char,int>lastindex;
-
     for(int right = 0; right < s.size() ; right++){
         char c = s[right];
         if(lastindex.count(c) && lastindex[c] >= left){

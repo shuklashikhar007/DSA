@@ -14,7 +14,7 @@ int atMost(vector<int>& arr, int goal) {
         sum += arr[right];
         while (sum > goal) {
             sum -= arr[left];
-            left++;
+            left++; 
         }
         count += (right - left + 1); // all subarrays ending at 'right'
     }

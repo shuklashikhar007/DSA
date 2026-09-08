@@ -3,7 +3,6 @@ using namespace std;
 long long maxSubarraySum(int arr[], int n){
     long long maxi = LONG_MIN;
     long long sum = 0;
-
     int start = 0;
     int ansStart = -1;
     int ansEnd = -1;
@@ -17,13 +16,12 @@ long long maxSubarraySum(int arr[], int n){
             ansStart = start;
             ansEnd = i;
         }
-
         if(sum < 0){
             sum = 0; // discard the cases where sum moves towards 0 to deacrease complexity
         }
     }
     cout << "The subarray with max sum is : [" ;
-        for(int i=ansStart; i<= ansEnd; i++){
+        for(int i=ansStart; i<=ansEnd; i++){
             cout << arr[i] << " ";
         }
         cout << "]n";

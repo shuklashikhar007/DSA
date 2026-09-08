@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 bool canWePlace(vector<int> &stalls, int dist, int cows) {
     int n = stalls.size(); //size of array
     int cntCows = 1; //no. of cows placed
@@ -18,7 +17,6 @@ int aggressiveCows(vector<int> &stalls, int k) {
     int n = stalls.size(); //size of array
     //sort the stalls[]:
     sort(stalls.begin(), stalls.end());
-
     int low = 1, high = stalls[n - 1] - stalls[0];
     //apply binary search:
     while (low <= high) {
@@ -30,7 +28,6 @@ int aggressiveCows(vector<int> &stalls, int k) {
     }
     return high;
 }
-
 int main()
 {
     vector<int> stalls = {0, 3, 4, 7, 10, 9};

@@ -4,8 +4,8 @@ vector<int> kClosest(vector<int>& a, int k, int x) {
     priority_queue<pair<int,int>> maxh;
     for (int num : a) {
         maxh.push({abs(num - x), num});
-        if (maxh.size() > k) {
-            maxh.pop();  
+        if (maxh.size() > k){ /// max heap ka size k se bada hote hi ham yaha par
+            maxh.pop();  // pop karte jayenge 
         }
     }
     vector<int> ans;

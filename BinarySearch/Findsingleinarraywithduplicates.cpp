@@ -11,7 +11,6 @@ int single(vector<int> &arr){
     if(arr[n-1] != arr[n-2]){
         return arr[n-1];
     }
-
     int low = 1;
     int high = n - 2;
     while(low <= high){

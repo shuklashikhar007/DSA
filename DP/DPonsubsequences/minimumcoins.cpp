@@ -15,10 +15,8 @@ int findcoins(int ind, int target, vector<int>& arr, vector<vector<int>> &dp) {
         int sub = findcoins(ind, target - arr[ind], arr, dp);
         if (sub != INT_MAX) take = 1 + sub; // only add if sub is valid
     }
-
     return dp[ind][target] = min(take, nottake);
 }
-
 int coins(vector<int>& arr, int target) {
     int n = arr.size();
     vector<vector<int>> dp(n, vector<int>(target + 1, -1));
@@ -26,7 +24,6 @@ int coins(vector<int>& arr, int target) {
     if (noofcoins == INT_MAX) return -1; // no solution
     return noofcoins;
 }
-
 int main() {
     vector<int> arr = {1,2,3};
     int target = 8;

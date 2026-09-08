@@ -1,4 +1,5 @@
 // this is a modified version of a problem we have already done on making the largest string having all distinct chars
+// agar puchte exactly k distinct chars then we would have done here atmost(k)-atmost(k-1) wali approach 
 #include<bits/stdc++.h>
 using namespace std;
 class Solution {

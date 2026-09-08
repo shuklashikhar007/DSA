@@ -18,9 +18,7 @@ int firstOccurrence(int arr[], int size, int key) {
         else {
             e = mid - 1;
         }
-        
     }
-    
     return ans;
 }
 

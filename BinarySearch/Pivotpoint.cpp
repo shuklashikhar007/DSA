@@ -8,19 +8,15 @@ int findPivot(int arr[], int n) {
     while (s <= e) {
         // If the array is already sorted
         if (arr[s] <= arr[e]) return e;
-
         int mid = s + (e - s) / 2;
-
         // Check if mid is pivot
         if (mid < n - 1 && arr[mid] > arr[mid + 1]) {
             return mid;
         }
-
         // Check if mid-1 is pivot
         if (mid > 0 && arr[mid] < arr[mid - 1]) {
             return mid - 1;
         }
-
         // Decide which half to choose
         if (arr[mid] >= arr[s]) {
             s = mid + 1; // pivot is on the right

@@ -1,7 +1,5 @@
-
 #include <bits/stdc++.h>
 using namespace std;
-
 int sumByD(vector<int> &arr, int div) {
     int n = arr.size(); 
     int sum = 0;
@@ -10,7 +8,6 @@ int sumByD(vector<int> &arr, int div) {
     }
     return sum;
 }
-
 int smallestDivisor(vector<int>& arr, int limit) {
     int n = arr.size();
     if (n > limit) return -1;
@@ -26,7 +23,6 @@ int smallestDivisor(vector<int>& arr, int limit) {
     }
     return low;
 }
-
 int main()
 {
     vector<int> arr = {1, 2, 3, 4, 5};

@@ -1,15 +1,11 @@
 #include <bits/stdc++.h>
-
 #include<unordered_set>
-
 using namespace std;
-
 int solve(string str) {
-
   if(str.size()==0)
       return 0;
   int maxans = INT_MIN;
-  unordered_set < int > set;
+  unordered_set<int>set;
   int l = 0;
   for (int r = 0; r < str.length(); r++) 
   {

@@ -4,7 +4,6 @@ using namespace std;
 vector<vector<int>> threeSum(vector<int> nums) {
     int n = nums.size();
     set<vector<int>> st; // to store unique triplets 
-
     for (int i = 0; i < n; i++) {
         unordered_set<int> hashset; // hashset to look out for the third element 
         for (int j = i + 1; j < n; j++) {
@@ -17,7 +16,6 @@ vector<vector<int>> threeSum(vector<int> nums) {
             hashset.insert(nums[j]); // otherwise nahi mila ya mil to bhi third to place it in the hashset for the future use 
         }
     }
-
     vector<vector<int>> result(st.begin(), st.end()); // convert the set into a 2D result vector.
     return result;
 }

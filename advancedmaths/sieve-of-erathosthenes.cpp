@@ -18,7 +18,7 @@ class Solution{
         // kyoki both 0 and 1 are not prime numbers
         for(int i=2 ; i*i <= maxvalue ; i++){
             if(isprime[i]){
-                for(int j = i*i; j<= maxvalue ; j++){
+                for(int j = i*i; j<= maxvalue ; j+=i){
                     // jo element prime hai uske sare multiples ko false mark kardo till maxvalue or i*i <= maxvalue
                     isprime[j] = false;
                 }

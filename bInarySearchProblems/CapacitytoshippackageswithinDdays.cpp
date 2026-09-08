@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int findDays(vector<int> &weights, int cap) {
     int days = 1; //First day.
     int load = 0;
@@ -17,7 +16,6 @@ int findDays(vector<int> &weights, int cap) {
     }
     return days;
 }
-
 int leastWeightCapacity(vector<int> &weights, int d) {
     //Find the maximum and the summation:
     int low = *max_element(weights.begin(), weights.end());

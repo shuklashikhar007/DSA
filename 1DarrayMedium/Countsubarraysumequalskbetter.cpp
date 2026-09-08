@@ -9,7 +9,7 @@ int noofsubarray(vector<int> arr, int k, int n){
         prefix[i] = prefix[i - 1] + arr[i];  // first we will make a prefix sum array 
     }
     for(int i = 0; i < n; i++){
-        if(prefix[i] == k){
+        if(prefix[i] == k){ // ye alag se handle karna nahi bhulna hota hai kabhi bhi
             ans++;  
         }
         if(mp.find(prefix[i] - k) != mp.end()){

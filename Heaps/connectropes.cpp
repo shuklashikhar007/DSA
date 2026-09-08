@@ -1,7 +1,7 @@
 #include<bits/stdc++.h>
 using namespace std;
 int mincost(vector<int>&ropes){
-    priority_queue<int, vector<int>, greater<int> > pq; // mih heap
+    priority_queue<int, vector<int>, greater<int>> pq; // min heap
     for(int x : ropes) pq.push(x);
     int cost = 0;
     while (pq.size() >1 )

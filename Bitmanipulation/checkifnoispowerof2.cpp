@@ -2,6 +2,7 @@
 using namespace std;
 class Solution {
 public:
+    // kaam ka function hai ye wala yaha par
     bool isPowerOfTwo(int n) {
         return n > 0 && (n & (n - 1)) == 0;  
     }

@@ -5,7 +5,7 @@ int main(){
 }
 class Solution {
 public:
-    int leastInterval(vector<char>& tasks, int n) {
+    int leastInterval(vector<char>&tasks, int n) {
         int time = 0;
         map<char,int>mpp;
         // pq batayega ki max freq wala task konsa left hai abhi 
@@ -28,7 +28,7 @@ public:
             }
             if(!q.empty() && q.front().second == time){ // natlab jo sabse first gya tha is now avail for execution
                 // to isko wapis pq mai dal do
-                pq.push(q.front().first);
+                pq.push(q.front().first); // abb ye apni frequency ke according execute ho jayega yaha par
                 q.pop();
             }
         }

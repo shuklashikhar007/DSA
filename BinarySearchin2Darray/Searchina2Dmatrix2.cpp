@@ -2,11 +2,9 @@
 // this is the better approach 
 #include <bits/stdc++.h>
 using namespace std;
-
 bool binarySearch(vector<int>& nums, int target) {
     int n = nums.size(); //size of the array
     int low = 0, high = n - 1;
-
     // Perform the steps:
     while (low <= high) {
         int mid = (low + high) / 2;

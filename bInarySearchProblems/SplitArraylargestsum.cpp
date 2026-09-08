@@ -12,11 +12,10 @@ bool ispossible(vector<int> &arr, int k , int mid){
             if(part > k || arr[i] > mid){
                 return false;
             }
-        }
-        sum = arr[i]; // place value of sum on next value of nums 
+            sum = arr[i];
+        } // place value of sum on next value of nums 
     }
     return true; // agar pura loop complete without any problem return true;
-
 }
 int splitarray(vector<int> &arr, int k){
     int s = *max_element(arr.begin(),arr.end());

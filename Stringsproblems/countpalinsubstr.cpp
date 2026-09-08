@@ -1,17 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 #define int long long
 #define fastio ios::sync_with_stdio(0); cin.tie(0);
-
 int32_t main() {
     fastio;
-
     string s;
     cin >> s;
     int n = s.size();
     int ans = 0;
-
     // Odd length palindromes
     for (int center = 0; center < n; center++) {
         int l = center, r = center;
@@ -21,7 +17,6 @@ int32_t main() {
             r++;
         }
     }
-
     // Even length palindromes
     for (int center = 0; center < n - 1; center++) {
         int l = center, r = center + 1;

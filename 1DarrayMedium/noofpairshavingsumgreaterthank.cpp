@@ -8,9 +8,9 @@ long long countPairsGreaterThanX(vector<int>& a, int x) {
     while (l < r) {
         if (a[l] + a[r] > x) {
             cnt += (r - l);  // all pairs (l...r-1, r)
-            r--;
+            r--; // r ke sare pairs cnt hogaye abb piche jao 
         } else {
-            l++;
+            l++; // sum x se kaam hai to piche jane ki jarrurat hai hame
         }
     }
     return cnt;

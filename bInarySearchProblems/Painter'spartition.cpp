@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+// same as book allocation wala question 
 int countPainters(vector<int> &boards, int time) {
     int n = boards.size(); //size of array.
     int painters = 1;
@@ -18,7 +18,6 @@ int countPainters(vector<int> &boards, int time) {
     }
     return painters;
 }
-
 int findLargestMinDistance(vector<int> &boards, int k) {
     int low = *max_element(boards.begin(), boards.end());
     int high = accumulate(boards.begin(), boards.end(), 0);

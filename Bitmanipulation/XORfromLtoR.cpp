@@ -16,22 +16,18 @@ public:
     /* Function to find the XOR 
     of numbers from L to R*/
     int findRangeXOR(int l, int r){			
-		return XORtillN(l-1) ^ XORtillN(r);
+		return XORtillN(l-1) ^ XORtillN(r); // same as prefix sum wali property yaha bhi use hogi for XOR wala case
 	}
 };
 
 int main() {
     int l = 3, r = 5;
-    
     /* Creating an instance of 
     Solution class */
     Solution sol; 
-    
     /* Function call to get the
     XOR of numbers from L to R*/
     int ans = sol.findRangeXOR(l, r);
-    
     cout << "The XOR of numbers from " << l << " to " << r << " is: " << ans;
-    
     return 0;
 }

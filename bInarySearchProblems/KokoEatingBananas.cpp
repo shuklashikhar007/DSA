@@ -1,6 +1,5 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int findMax(vector<int> &v) {
     int maxi = INT_MIN;
     int n = v.size();
@@ -9,7 +8,6 @@ int findMax(vector<int> &v) {
     }
     return maxi;
 }
-
 int calculateTotalHours(vector<int> &v, int hourly) {
     int totalH = 0;
     int n = v.size();

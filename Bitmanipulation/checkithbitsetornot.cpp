@@ -12,7 +12,6 @@ bool check(int n, int bit){
     if(bit >= binary.size()) return false; // req bit string se badi hai to iskamatlba whaha pakka 0 hoga
     // return false;
     return (binary[bit] == '1') ; // agar req bit 1 hai to return true;
-
 }
 int main(){
     int n;

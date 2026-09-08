@@ -1,13 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int findAllSubarraysWithGivenSum(vector < int > & arr, int k) {
     int n = arr.size(); // size of the given array.
     int cnt = 0; // Number of subarrays:
-
     for (int i = 0 ; i < n; i++) { // starting index i
         for (int j = i; j < n; j++) { // ending index j
-
             // calculate the sum of subarray [i...j]
             int sum = 0;
             for (int K = i; K <= j; K++)

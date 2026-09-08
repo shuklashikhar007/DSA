@@ -30,34 +30,27 @@ bool subsetSumUtil(int ind, int target, vector<int>& arr, vector<vector<int>>& d
 // Function to check if the array can be partitioned into two equal subsets
 bool canPartition(int n, vector<int>& arr) {
     int totSum = 0;
-
     // Calculate the total sum of the array
     for (int i = 0; i < n; i++) {
         totSum += arr[i];
     }
-
     // If the total sum is odd, it cannot be partitioned into two equal subsets
     if (totSum % 2 == 1)
         return false;
     else {
         int k = totSum / 2;
-
         // Create a DP table with dimensions n x k+1 and initialize with -1
         vector<vector<int>> dp(n, vector<int>(k + 1, -1));
-
         // Call the subsetSumUtil function to check if it's possible to partition
         return subsetSumUtil(n - 1, k, arr, dp);
     }
 }
-
 int main() {
     vector<int> arr = {2, 3, 3, 3, 4, 5};
     int n = arr.size();
-
     if (canPartition(n, arr))
         cout << "The Array can be partitioned into two equal subsets";
     else
         cout << "The Array cannot be partitioned into two equal subsets";
-
     return 0;
 }

@@ -37,7 +37,6 @@ int findPages(vector<int>& arr, int n, int m) {
     }
     return low;
 }
-
 int main()
 {
     vector<int> arr = {25, 46, 28, 49, 24};

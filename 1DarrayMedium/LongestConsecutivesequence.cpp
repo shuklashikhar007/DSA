@@ -1,17 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int longestSuccessiveElements(vector<int>&a) {
     int n = a.size();
     if (n == 0) return 0;
-
     int longest = 1;
     unordered_set<int> st;
     //put all the array elements into set:
     for (int i = 0; i < n; i++) {
         st.insert(a[i]);
     }
-
     //Find the longest sequence:
     for (auto it : st) {
         //if 'it' is a starting number:
@@ -27,9 +24,7 @@ int longestSuccessiveElements(vector<int>&a) {
         }
     }
     return longest;
-
 }
-
 int main()
 {
     vector<int> a = {100, 200, 1, 2, 3, 4};

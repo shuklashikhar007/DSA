@@ -1,6 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
   vector<int> RearrangebySign(vector<int>A){
     int n = A.size();
     // ek array which will store the answer seprately 
@@ -21,10 +20,8 @@ using namespace std;
         }
 
     }
-    return ans;
-    
+    return ans;   
 }
-
 int main() {
     
   // Array Initialisation.

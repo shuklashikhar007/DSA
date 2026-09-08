@@ -2,6 +2,7 @@
 // each iteration of n = n & (n-1) removes the rightmost setbit or rightmost 1 from the binary representation of the number
 #include<bits/stdc++.h>
 using namespace std;
+// tagda idea hai ye wala 
 int noofset(int n){
     int count = 0;
     while (n) // jabtak n greater than 0 hai tab tak

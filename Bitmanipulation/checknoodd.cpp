@@ -14,9 +14,7 @@ int main(){
     else cout << "ODD" << endl;
     // ye modulo wala tarika hai
     */
-
     // agar bit se karna hai to we will check 0thbit of the binary
-
     int n;
     cin  >> n;
     int check  = bit(n);
