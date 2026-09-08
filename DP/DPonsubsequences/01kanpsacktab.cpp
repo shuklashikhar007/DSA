@@ -10,18 +10,14 @@ int knapsack(int W, vector<int>& wt, vector<int>& val) {
     // Build table row-by-row
     for (int i = 1; i <= n; i++) {
         for (int w = 0; w <= W; w++) {
-
             int notTake = dp[i - 1][w];   // not pick ith item
-
             int take = INT_MIN;
             if (wt[i - 1] <= w) {
                 take = val[i - 1] + dp[i - 1][w - wt[i - 1]];  // pick ith item
             }
-
             dp[i][w] = max(take, notTake);
         }
     }
-
     return dp[n][W];
 }
 
