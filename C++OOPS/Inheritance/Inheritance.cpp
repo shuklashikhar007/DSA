@@ -50,13 +50,11 @@ public:
 class Bike : public Vehicle {
 private:
     bool hasGear;
-
 public:
     Bike(string b, int speed, bool gear)
         : Vehicle(b,speed), hasGear(gear) {
         cout << "[Bike constructor called]\n";
     }
-
     void showBikeDetails() {
         showDetails();   // inherited method
         cout << "Has Gear: " << (hasGear ? "Yes" : "No") << "\n";

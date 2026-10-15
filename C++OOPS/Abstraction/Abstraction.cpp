@@ -1,27 +1,22 @@
 // abstraction_example.cpp
 // Demonstrates Abstraction using an abstract class (interface-like) PaymentMethod
-
 #include <iostream>
 #include <string>
 using namespace std;
-
 // ---------------- Abstract Class ----------------
 class PaymentMethod {
 public:
     // Pure virtual function -> makes this class abstract.
     // Any derived class MUST implement this.
     virtual void pay(double amount) = 0;
-
     // Abstract classes can still have normal (non-pure) methods
     virtual void showMethodName() const {
         cout << "Generic Payment Method\n";
     }
-
     virtual ~PaymentMethod() {
         // virtual destructor for safe polymorphic cleanup
     }
 };
-
 // ---------------- Concrete Implementations ----------------
 
 class CreditCardPayment : public PaymentMethod {

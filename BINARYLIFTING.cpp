@@ -18,7 +18,7 @@ void dfs(int node, int parent){
         up[node][j] = up[up[node][j-1]][j-1];
     }
     for(int ch : adj[node]){
-        if(ch == parent){ /// ye dikkat agar undirected tree hai to nahi ayegi 
+        if(ch == parent){ /// ye dikkat agar undirected tree hai to  ayegi 
             continue;
         }
         depth[ch] = depth[node] + 1;

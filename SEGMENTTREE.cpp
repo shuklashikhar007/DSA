@@ -73,7 +73,7 @@ int main(){
     // same code can be used to solve max min in range wali problem as well
     // list of all possible problems jo isse solve hoti hai
     /*
-    Range Sum Query
+Range Sum Query
 Range Minimum Query (RMQ)
 Range Maximum Query
 Range GCD Query

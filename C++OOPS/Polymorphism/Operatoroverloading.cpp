@@ -15,8 +15,7 @@ public:
     {
         // Complex ans = (real + obj.real, imag + obj.imag);
         // return ans;
-        return Complex(real + obj.real,
-                       imag + obj.imag);
+        return Complex(real + obj.real,imag + obj.imag);
     }
     Complex operator-(Complex &obj){
         return Complex(real - obj.real, imag - obj.imag);

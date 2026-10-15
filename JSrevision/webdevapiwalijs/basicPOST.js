@@ -14,9 +14,7 @@ async function createPost() {
                 })
             }
         );
-
         const data = await response.json();
-
         console.log(data);
     }
     catch (err) {
