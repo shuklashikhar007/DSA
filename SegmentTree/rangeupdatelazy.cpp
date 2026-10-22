@@ -35,7 +35,7 @@ class Segtree{
             lazy[2*node+2] += lazy[node];
         }
 
-        lazy[node] = 0; // pendency remove kar denge
+        lazy[node] = 0; // pendency remove kar denge is wali particular node se hamlog 
     }
 
     void update(int st, int end ,ll val, int node, int l , int r){
