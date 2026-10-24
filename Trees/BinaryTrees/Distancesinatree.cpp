@@ -1,5 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
+// this question was asked to me in ThoughtSpot(Intern) ke interview round 1 mai
 class Solution{
     public:
     vector<vector<int>>adj;

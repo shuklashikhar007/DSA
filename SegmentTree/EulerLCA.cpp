@@ -14,6 +14,7 @@ struct SegTree {
     }
 
     int merge(int a, int b) {
+        // jiski depth minimum hai wo store hoga node mai
         if (dep[euler[a]] <= dep[euler[b]]) return a;
         return b;
     }
@@ -32,17 +33,13 @@ struct SegTree {
     }
 
     int query(int i, int l, int r, int ql, int qr) {
-        if (qr < l || r < ql) return -1;
-
+        if (qr < l || r < ql) return 0;
         if (ql <= l && r <= qr) return st[i];
-
         int m = (l + r) / 2;
         int a = query(2 * i + 1, l, m, ql, qr);
         int b = query(2 * i + 2, m + 1, r, ql, qr);
-
-        if (a == -1) return b;
-        if (b == -1) return a;
-
+        // is cheez ka dhyan rakhna hai in subarray queries question as well
+        return a+b;
         return merge(a, b);
     }
 
@@ -83,13 +80,13 @@ int main() {
     SegTree st(euler.size(), euler, dep);
 
     while (q--) {
+        // iss approach se distance queries bhi solve kar sakte hai
+        // dis(u,v) = dep[u] + dep[v] - 2*dep[lca(u,v)];
         int u, v;
         cin >> u >> v;
-
         int l = first[u], r = first[v];
         if (l > r) swap(l, r);
-
         int idx = st.query(l, r);
-        cout << euler[idx] << '\n';
+        cout << euler[idx] << endl;
     }
 }
